@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Before running the development server make sure to have docker installed on the local system and running
+Before running the development server make sure to have docker installed on the local system and running.
+
+This is a BLog Project [Project](https://dev.to/livecycle/building-a-message-board-with-nextjs-and-appwrite-3910)
 
 For starting App-Write backend using docker
 
