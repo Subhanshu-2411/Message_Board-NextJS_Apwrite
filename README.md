@@ -2,13 +2,35 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Before running the development server make sure to have docker installed on the local system and running
 
-```bash
+For starting App-Write backend using docker
+
+```sh
+docker run -it --rm \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    --volume "${pwd}"/appwrite:/usr/src/code/appwrite:rw \
+    --entrypoint="install" \
+    appwrite/appwrite:1.3.4
+```
+
+Now create a Project as ``message-board`` and ``Add a Platform`` as ``Web App`` naming it again ``message-board``.
+
+Now go to Databases and create a new Database as ``message-board`` and leave the databaseID as empty. Create a new ``Collection`` as ``message``.
+
+Inside the ``message`` create a new Schema as ``messages`` and inside that create a new ``String`` attribute with size ``1024`` and mark it as ``Required``
+
+Now, run the development server:
+
+```sh
 npm run dev
-# or
+```
+### or
+```sh
 yarn dev
-# or
+```
+### or
+```sh
 pnpm dev
 ```
 
